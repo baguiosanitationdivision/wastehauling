@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hauling of Healthcare Waste at Health Centers</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand-icon">
+      <svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 8h16M8 8V6a1 1 0 011-1h8a1 1 0 011 1v2M10 12v6M13 12v6M16 12v6M6 8l1 13h12l1-13" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <h1>Hauling of Healthcare Waste at Health Centers</h1>
+      <p> Waste Hauling Record System</p>
+    </div>
+  </header>
+
+
+
+  <!-- FORM -->
+  <div class="card">
+    <div class="card-head"><div class="dot"></div><h2>New entry</h2></div>
+    <div class="form-grid">
+
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" id="entryDate" />
+      </div>
+
+      <div class="form-group">
+        <label>Weight of waste (kg)</label>
+        <input type="number" id="weight" placeholder="0.00" step="0.01" min="0" />
+      </div>
+
+      <div class="form-group span2">
+        <label>Sanitation inspector in-charge</label>
+        <input type="text" id="inspector" placeholder="Full name" />
+      </div>
+
+      <div class="form-group span2">
+        <label>Inspection and treatment</label>
+        <input type="text" id="inspection" placeholder="-" />
+      </div>
+
+      <div class="form-group span2">
+        <label>District health center</label>
+        <input type="text" id="dhc" placeholder="Health center name" />
+      </div>
+
+    </div>
+
+    <div class="submit-row">
+      <button class="btn-submit" id="submitBtn" onclick="submitEntry()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Submit to Sheet
+      </button>
+      <button class="btn-clear" onclick="clearForm()">Clear</button>
+    </div>
+    <div id="toast"></div>
+  </div>
+
+  <!-- LOG 
+  <div class="card">
+    <div class="card-head"><div class="dot"></div><h2>Session log</h2></div>
+    <div id="logList"><p class="log-empty">No entries submitted yet.</p></div>
+  </div>
+ -->
+
+</div>
+
+<script src="script.js"> </script>
+
+</body>
+</html>
